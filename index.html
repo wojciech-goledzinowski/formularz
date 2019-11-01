@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Formularz EL/W/1</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Wniosek o nadanie numeru PESEL</h1>
+    <form action="formularz.php" method="post">
+        <fieldset>
+            <legend>1. Wnioskodawca</legend>
+            <div>
+                <label class="field">Imię</label>
+                <input type="text" name="imie">
+            </div>
+            <div>
+                <label class="field">Nazwisko</label>
+                <input type="text" name="nazwisko">
+            </div>
+            <div>
+                <p>Adres do korespodencji osoby, która składa wniosek</p>
+            </div>
+            <div>
+                <label class="field">Ulica</label>
+                <input type="text" name="ulica">
+            </div>
+            <div>
+                <label class="field">Numer domu</label>
+                <input type="number" name="numer-domu">
+            </div>
+            <div>
+                <label class="field">Numer lokalu</label>
+                <input type="number" name="numer-lokalu">
+            </div>
+            <div>
+                <label class="field">Kod pocztowy</label>
+                <input type="text" name="kod-pocztowy" pattern="[0-9]{2}\-[0-9]{3}" title="Format xx-xxx" maxlength="6" size="6">
+            </div>
+            <div>
+                <label class="field">Miejscowość</label>
+                <input type="text" name="miejscowosc">
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>2. Dane osoby, której dotyczy wniosek</legend>
+            <div>
+                <label class="field">Imię pierwsze</label>
+                <input type="text" name="imie1">
+            </div>
+            <div>
+                <label class="field">Imię drugie</label>
+                <input type="text" name="imie2">
+            </div>
+            <div>
+                <label class="field">Imiona kolejne</label>
+                <input type="text" name="imie3">
+            </div>
+            <div>
+                <label class="field">Nazwisko</label>
+                <input type="text" name="nazwisko2">
+            </div>
+            <div>
+                <label class="field">Płeć</label>
+                <input type="radio" name="plec" value="k">
+                <label>kobieta</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="plec" value="m">
+                <label>mężczyzna</label>
+            </div>
+            <div class="data">
+                <label class="field">Data urodzenia</label>
+                <input type="date" name="data">
+            </div>
+            <div>
+                <label class="field">Kraj urodzenia</label>
+                <input type="text" name="kraj1">
+            </div>
+            <div>
+                <label class="field">Kraj miejsca zamieszkania</label>
+                <input type="text" name="kraj2">
+            </div>
+            <div>
+                <label class="field">Obywatelstwo lub status bezpaństwowiec</label>
+                <input type="radio" name="obywatelstwo" value="pl">
+                <label>polskie</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="obywatelstwo" value="brak">
+                <label>bezpaństwowiec</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="obywatelstwo" value="inny">
+                <input type="text" name="obywatelstwo1">
+            </div>
+            <div>
+                <p>Ostatnio wydany paszport obywatela polskiego</p>
+            </div>
+            <div>
+                <label class="field">Seria i numer</label>
+                <input type="text" name="seria1">
+            </div>
+
+            <div class="data">
+                <label class="field">Data ważności paszportu</label>
+                <input type="date" name="data1">
+            </div>
+
+            <div>
+                <p>Dokument podrózy cudzoziemca lub inny dokument potwierdzający tożsamość i obywatelstwo</p>
+            </div>
+            <div>
+                <label class="field">Seria i numer</label>
+                <input type="text" name="sera2">
+            </div>
+
+            <div class="data">
+                <label class="field">Data ważności dokumentu</label>
+                <input type="date" name="data2">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>3. Dodatkowe dane osoby, której wniosek dotyczy, oraz dane jej rodziców</legend>
+            <div>
+                <p class="zwykly">Wypełnij, jeżeli dane są dostępne i wynikają z przedstawionych dokumentów</p>
+            </div>
+            <div>
+                <label class="field">Nazwisko rodowe</label>
+                <input type="text" name="nazwisko-rodowe">
+            </div>
+            <div>
+                <label class="field">Miejsce urodzenia <br>
+                    (nazwa miejscowosci)</label>
+                <input type="text" name="miejscowosc2">
+            </div>
+            <div>
+                <label class="field">Oznaczenie aktu urodzenia</label>
+                <input type="text" name="akt">
+            </div>
+            <div>
+                <label class="field">Oznaczenie urzędu stanu cywilnego, w którym został sporządzony akt urodzenia</label>
+                <input type="text" name="urzad"><br><br><br>
+            </div>
+            <div>
+                <label class="field">Imię ojca pierwsze</label>
+                <input type="text" name="imie-ojca">
+            </div>
+            <div>
+                <label class="field">Nazwisko rodowe ojca</label>
+                <input type="text" name="nazwisko-rodowe-ojca">
+            </div>
+            <div>
+                <label class="field">Imie matki pierwsze</label>
+                <input type="text" name="imie-matki-pierwsze">
+            </div>
+            <div>
+                <label class="field">Nazwisko rodowe matki</label>
+                <input type="text" name="nazwisko-rodowe-matki">
+            </div>
+            <div>
+                <p>Ostatnio wydany dowód osobisty obywatela polskiego</p>
+            </div>
+            <div>
+                <label class="field">Seria i numer</label>
+                <input type="text" name="seria2">
+            </div>
+            <div class="data">
+                <label class="field">Data ważności dokumentu osobistego</label>
+                <input type="date" name="data3">
+            </div>
+            <div>
+                <label class="field">Oznaczenie organu który wydał dowód</label>
+                <input type="text" name="organ">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>4. Dane o stanie cywilnym osoby, której wniosek dotyczy</legend>
+            <div>
+                <p class="zwykly">Wypełnij, jeżeli dane są dostępne i wynikają z przedstawionych dokumentów</p>
+            </div>
+            <div>
+                <label class="field">Stan cywilny</label>
+                <input type="radio" name="stan" value="k">
+                <label>kawaler/panna</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="stan" value="z">
+                <label>żonaty/zamężna</label>
+            </div>
+            <div class="ramka">
+                <div>
+                    <p class="zwykly">Wypełnij tylko, jeśli zaznaczyłeś opcję "żonaty/zamężna"</p>
+                </div>
+                <div>
+                    <label class="field">Imię małżonka</label>
+                    <input type="text" name="imie-malzonka">
+                </div>
+                <div>
+                    <label class="field">Nazwisko rodowe małżonka</label>
+                    <input type="text" name="nazwisko-rodowe-malzonka">
+                </div>
+                <div>
+                    <label class="field">Numer PESEL małżonak</label>
+                    <input type="text" name="seria2">
+                    <label class="info"><br>! Podaj go tylko jeśli został nadany !</label>
+                </div>
+
+            </div>
+            <div>
+                <input class="next" type="radio" name="stan" value="r">
+                <label>rozwiedziony/rozwiedziona</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="stan" value="w">
+                <label>wdowiec/wdowa</label>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>5. Ostatnie zdarzenie majace wpływ na mażeństwo</legend>
+            <div>
+                <p class="zwykly">Wypełnij, jeżeli osoba której dotyczy wniosek, kiedykolwiek zawarła związek małżeński. Zaznacz pole, jedno najbardziej aktualne zdarzenie i uzupełnij pozostałe pola.</p>
+            </div>
+            <div>
+                <label class="field">Zdarzenie</label>
+                <input type="radio" name="zdarzenie" value="1">
+                <label>zawarcie związku małżeńskiego</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="zdarzenie" value="2">
+                <label>rozwiązanie związku małżeńskiego</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="zdarzenie" value="3">
+                <label>unieważnienie zwązku małżeńskiego</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="zdarzenie" value="4">
+                <label>zgon małżonka (zaznacz jeśli znasz datę zgonu)</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="zdarzenie" value="5">
+                <label>zgon małżonka - znalezienie zwłok (zaznacz jeśli małżonek zmarł </label>
+                <label class="radio"><br>ale znasz jedynie datę znalezienia ciała)</label>
+            </div>
+            <div class="data">
+                <label class="field">Data zdarzenia</label>
+                <input type="date" name="data-zdarzenia">
+            </div>
+
+            <div>
+                <p class="zwykly">Oznaczenie aktu małżeństwa albo sygnatura akt sądu, który rozwiązał/unieważnił małżeństwo, <br> albo numer aktu zgonu małżonka.</p>
+            </div>
+            <div>
+                <input class="last" type="text" name="zdarzenie-akt">
+            </div>
+
+            <div>
+                <p class="zwykly">Oznaczenie urzędu stanu cywilnego, w którym sporządzono akt małżeństwa albo akt zgonu, albo oznaczenie sądu, <br> który rozwiązał/unieważnił małżeństwo.</p>
+            </div>
+            <div>
+                <input class="last" type="text" name="zdarzenie-urzad">
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>6. Forma przekazania wnioskodawcy powiadomienia o ndaniu numeru PESEL</legend>
+            <div>
+                <input class="next" type="radio" name="forma" value="p">
+                <label>pisemna</label>
+            </div>
+            <div>
+                <input class="next" type="radio" name="forma" value="e">
+                <label>dokument elektroniczny</label>
+            </div>
+            <div class="ramka">
+                <div>
+                    <p class="zwykly">Wypełnij jeśli zaznaczyłeś opcję "dokument elektroniczny"</p>
+                </div>
+                <div>
+                    <label class="field">Adres elektroniczny</label>
+                    <input type="text" name="email">
+                    <label class="info"><br>! Adres skrzynki ePUAP !</label>
+                </div>
+
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>7. Podstawa prawna upoważniająca do otrzymania numeru PESEL - wskazanie przepisu, z którego wynika obowiązek posiadania numeru PESEL</legend>
+            <div>
+                <textarea name="text" cols="100" rows="10"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>8. Podpisy</legend>
+            <div>
+                <label class="field">Miejscowość</label>
+                <input type="text" name="podpis-miejscowosc">
+            </div>
+            <div class="data">
+                <label class="field">Data</label>
+                <input type="date" name="podpis-data">
+            </div>
+            <div>
+                <label class="field">Podpis</label>
+                <input type="text" name="podpis" placeholder="Imię i nazwisko">
+
+            </div>
+
+            <div>
+                <input type="submit" value="Wyślij">
+            </div>
+
+        </fieldset>
+
+
+
+
+    </form>
+
+</body>
+
+</html>
